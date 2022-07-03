@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    implementation project (":commons.infra")
+    implementation dep_spring_start
+    implementation dep_spring_actuator
+    implementation dep_spring_web
+    implementation dep_spring_security
+    implementation dep_reactor
+    implementation dep_slf4j
+    implementation dep_slf4j_over
+    implementation dep_logback_classic
+    implementation dep_logback_core
+    implementation dep_lombok
+    implementation dep_camel_core
+    implementation dep_camel_stream
+    testImplementation dep_spring_test_all
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}

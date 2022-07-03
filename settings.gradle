@@ -1,0 +1,5 @@
+rootProject.name = 'Cathegorising'
+include 'commons.infra'
+include 'UrlTextCrawler'
+include 'cathegorized.cathegories'
+
